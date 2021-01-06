@@ -53,7 +53,8 @@ select
     joined_org_horse_master.org_blood_mare_master_name,
     joined_org_horse_master.org_blood_mare_master_org_sire_master_name,
     joined_org_horse_master.org_sire_master_org_sire_line_master_name,
-    joined_org_horse_master.org_blood_mare_master_org_sire_line_master_name
+    joined_org_horse_master.org_blood_mare_master_org_sire_line_master_name,
+    joined_org_horse_master.birthday
 from race_result
 	left join org_race_master
 		on race_result.org_race_master_id = org_race_master.id
@@ -135,8 +136,8 @@ from race_result
 				on org_trainer_master.jvd_belongings_master_id = jvd_belongings_master.id
     ) as joined_org_trainer_master
 		on race_result.org_trainer_master_id = joined_org_trainer_master.id
-	where race_result.org_race_master_id = 2020020905010411
-    order by race_result.order_of_arrival_confirmed;
+	where race_result.org_race_master_id = "2020120506050111"
+    order by race_result.horse_num;
 
 #joined_org_horse_master
 select
