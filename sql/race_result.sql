@@ -216,7 +216,10 @@ from org_trainer_master
         
         
         
-        
+select * from org_horse_master
+where name = "ブラストワンピース";
+
+select * from target_track_type_master;
         
         
         
